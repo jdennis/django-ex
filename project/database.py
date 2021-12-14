@@ -11,7 +11,7 @@ engines = {
 
 
 def config():
-    print(os.environ)
+    print("jrd environ = %s" % (os.environ))
     service_name = os.getenv('DATABASE_SERVICE_NAME', '').upper().replace('-', '_')
     if service_name:
         engine = engines.get(os.getenv('DATABASE_ENGINE'), engines['sqlite'])
